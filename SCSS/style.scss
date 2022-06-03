@@ -196,6 +196,11 @@ body {
     padding: 14px;
     height: 38px;
     width: 100%;
+    font-size: 16px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 14px;
 }
 
 .add {
