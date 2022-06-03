@@ -21,11 +21,16 @@ const closeUser = document.querySelector(".close__user")
 const containerUser = document.querySelector(".container__user")
 const bodyContent = document.querySelector(".body")
 
-closeUser.addEventListener("click", () => {
-    containerUser.style = "display: none"
-    bodyContent.classList.remove("body")
+let closePopup = function() {
+    closeUser.addEventListener("click", () => {
+        containerUser.style = "display: none"
+        bodyContent.classList.remove("body")
+        
+    })
+    unload()
+}
+closePopup()
 
-})
 
 /* Меняем иконку фильтра */
 
@@ -87,7 +92,7 @@ function addTask() {
             return
         }
 
-        pasteTask.insertAdjacentHTML("afterend", `
+        pasteTask.insertAdjacentHTML('afterbegin', `
         <div class="container__task">
         <div class="task">
                 <div class="task__item">
@@ -116,7 +121,7 @@ function addTask() {
         }
 
         if (e.key === "Enter") {
-            pasteTask.insertAdjacentHTML("afterend", `
+            pasteTask.insertAdjacentHTML('afterbegin', `
             <div class="container__task">
             <div class="task">
                     <div class="task__item">
@@ -207,7 +212,7 @@ let load = function () {
 
 function unload() {
     window.addEventListener("load", () => {
-
+        request()
         for (let i = 0; i < localStorage.length; i++) {
             let openTask = JSON.parse(localStorage[i])
             let textContent = openTask.textContent
@@ -240,10 +245,11 @@ function unload() {
         }
         checked()
         deleteTask()
-        request()
+        
+
     })
 }
-unload()
+
 
 /* Запросы на сервер */
 
@@ -255,7 +261,7 @@ let request = function () {
         if (xhr.readyState === xhr.DONE) {
             let parseJ = JSON.parse(xhr.responseText)
             for (let i = 0; i < 5; i++) {
-                pasteTask.insertAdjacentHTML("afterend", `
+                pasteTask.insertAdjacentHTML('afterend', `
             <div class="container__task" data-flag="server">
             <div class="task">
             <div class="task__item">
@@ -277,17 +283,3 @@ let request = function () {
         }
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

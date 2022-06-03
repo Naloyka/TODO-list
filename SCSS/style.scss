@@ -43,8 +43,8 @@ body {
     width: 100%;
     width: 100%;
     font-family: Noto Sans;
-    height: 100vh;
     background-color: $colorMain;
+    min-height: 100vh;
 }
 
 .body {
@@ -260,6 +260,18 @@ body {
     background-color: white;
     margin-top: 5px;
     min-height: 44px;
+    animation-name: task;
+    animation-duration: 0.5s
+}
+
+@keyframes task {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
 }
 
 .container__task_hidden {
@@ -362,9 +374,20 @@ body {
     justify-content: center;
     z-index: 1000;
     padding: 30px 25px;
-    top: calc(50% - 90px);
+    top: 40vh;
     right: calc(50% - 99px);
+    animation-name: animate;
+    animation-duration: 1s
+}
 
+@keyframes animate {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
 }
 
 .container__user__items {
@@ -433,4 +456,3 @@ body {
     background-image: url("../Image/Vector (Stroke).png");
     position: absolute;
 }
-

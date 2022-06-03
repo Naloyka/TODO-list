@@ -32,8 +32,8 @@ body {
   width: 100%;
   width: 100%;
   font-family: Noto Sans;
-  height: 100vh;
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  min-height: 100vh; }
 
 .body {
   display: block;
@@ -215,8 +215,15 @@ body {
   width: 100%;
   background-color: white;
   margin-top: 5px;
-  min-height: 44px; }
+  min-height: 44px;
+  animation-name: task;
+  animation-duration: 0.5s; }
 
+@keyframes task {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 .container__task_hidden {
   display: none; }
 
@@ -303,9 +310,16 @@ body {
   justify-content: center;
   z-index: 1000;
   padding: 30px 25px;
-  top: calc(50% - 90px);
-  right: calc(50% - 99px); }
+  top: 40vh;
+  right: calc(50% - 99px);
+  animation-name: animate;
+  animation-duration: 1s; }
 
+@keyframes animate {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 .container__user__items {
   display: flex;
   flex-direction: column;
