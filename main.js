@@ -87,7 +87,7 @@ function addTask() {
             return
         }
 
-        pasteTask.closest.insertAdjacentHTML("afterend", `
+        pasteTask.insertAdjacentHTML("afterend", `
         <div class="container__task">
         <div class="task">
                 <div class="task__item">
