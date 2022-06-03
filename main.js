@@ -52,7 +52,7 @@ option.forEach(item => {
         const stateChecked = Array.from(document.querySelectorAll(".checkbox__input"))
         const containerTask = Array.from(document.querySelectorAll(".container__task"))
 
-        if (item.getAttribute("value") == 3) {
+        if (item.getAttribute("data-value") == 3) {
             for (let i = 0; i < stateChecked.length; i++) {
                 containerTask[i].classList.remove("container__task_hidden")
                 if (stateChecked[i].checked === true) {
@@ -61,7 +61,7 @@ option.forEach(item => {
             }
         }
 
-        if (item.getAttribute("value") == 2) {
+        if (item.getAttribute("data-value") == 2) {
             for (let i = 0; i < stateChecked.length; i++) {
                 containerTask[i].classList.remove("container__task_hidden")
                 if (stateChecked[i].checked === false) {
@@ -70,7 +70,7 @@ option.forEach(item => {
             }
         }
 
-        if (item.getAttribute("value") == 1) {
+        if (item.getAttribute("data-value") == 1) {
             for (let i = 0; i < stateChecked.length; i++) {
                 containerTask[i].classList.remove("container__task_hidden")
             }
