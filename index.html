@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="SCSS/style.css">
+</head>
+
+<body class="body">
+    <header class="container__todo">
+        <nav class="container__header">
+            <div class="container__main-information">
+                <div class="container__logo">
+                    <img class="logo" src="Image/Frame236.svg" alt="логотип">
+                </div>
+                <div class="container__main-link">
+                    <a href="#" class="link__home">Avtograph</a>
+                </div>
+            </div>
+            <div class="link__contact">
+                <a href="mailto:y@mail.ru" class="mail"></a>
+                <a href="tel:890765445678" class="tel"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container__main">
+        <div class="container__select">
+            <p class="text__todo">Autograph TODO list</p>
+            <div class="select__option">Все</div>
+            <div class="container__option" style="display: none;">
+                <div class="option"><a class="option__link">Все</a></div>
+                <div class="option"><a class="option__link">Выполненные</a></div>
+                <div class="option"><a class="option__link">В работе</a></div>
+            </div>
+        </div>
+
+        <div class="container__input">
+            <input type="text" class="input" placeholder="Поле ввода">
+            <button class="add">
+                <span class="plus"></span>
+            </button>
+        </div>
+
+        <div class="paste__task"></div>
+
+
+        <!--<div class="container__task">
+            <div class="task">
+                <div class="task__item">
+                    
+                    <label class="checkbox__label">
+                        <input type="checkbox" name="checkbox" class="checkbox__input" id="checkbox">
+                        <span class="checkbox__span"></span>
+                    </label>
+
+                    <p class="text__task">done</p>
+                </div>
+                <div class="close"></div>
+            </div>
+        </div>-->
+    </main>
+
+    <div class="container__user">
+        <div class="close__user"></div>
+        <div class="user__content">
+            <header class="header__user">
+                <div class="container__img__user">
+                    <img src="Image/user.png" alt="user">
+                </div>
+                <div class="container__title">
+                    <h5 class="title">user 7543</h5>
+                </div>
+            </header>
+            
+            <div class="container__user__items">
+                <div class="container__user__item container__user__item_1"><a href="#" class="link__user">Профиль</a></div>
+                <div class="container__user__item container__user__item_2"><a href="#" class="link__user">История</a></div>
+                <div class="container__user__item container__user__item_3"><a href="#" class="link__user">Выйти</a></div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
