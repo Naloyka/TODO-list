@@ -263,7 +263,7 @@ let request = function () {
             <div class="task">
             <div class="task__item">
             <label class="checkbox__label">
-                <input type="checkbox" name="checkbox" class="checkbox__input" id="checkbox "">
+                <input type="checkbox" name="checkbox" class="checkbox__input" id="checkbox">
                 <span class="checkbox__span"></span>
             </label>
             <p class="text__task" translate="no">${parseJ[i].title}</p>
