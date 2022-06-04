@@ -87,27 +87,27 @@ const containerInput = document.querySelector(".container__input")
 const input = document.querySelector(".input")
 
 function addTask() {
+    
     add.addEventListener("click", () => {
         if (input.value === "") {
             return
         }
 
+       
+
         pasteTask.insertAdjacentHTML('afterbegin', `
         <div class="container__task">
-        <div class="task">
+            <div class="task">
                 <div class="task__item">
-                    
                     <label class="checkbox__label">
                         <input type="checkbox" name="checkbox" class="checkbox__input" id="checkbox">
                         <span class="checkbox__span"></span>
                     </label>
-    
-                    <p class="text__task">${input.value}</p>
+                    <p class="text__task" translate="no">${input.value}</p>
                 </div>
-                <div class="close"></div>
+            <div class="close"></div>
             </div>
-            </div>`)
-
+        </div>`)
         input.value = "";
         checked()
         deleteTask()
@@ -123,20 +123,17 @@ function addTask() {
         if (e.key === "Enter") {
             pasteTask.insertAdjacentHTML('afterbegin', `
             <div class="container__task">
-            <div class="task">
+                <div class="task">
                     <div class="task__item">
-                        
                         <label class="checkbox__label">
                             <input type="checkbox" name="checkbox" class="checkbox__input" id="checkbox">
                             <span class="checkbox__span"></span>
                         </label>
-    
-                        <p class="text__task">${input.value}</p>
+                        <p class="text__task" translate="no">${input.value}</p>
                     </div>
-                    <div class="close"></div>
+                <div class="close"></div>
                 </div>
-                </div>`)
-
+            </div>`)
             input.value = "";
             checked()
             deleteTask()
@@ -237,7 +234,7 @@ function unload() {
                 <input type="checkbox" name="checkbox" class="checkbox__input" id="checkbox" ${flagChecked}>
                 <span class="checkbox__span"></span>
             </label>
-            <p class="text__task ${flagClass}">${textContent}</p>
+            <p class="text__task ${flagClass}" translate="no">${textContent}</p>
                 </div>
                 <div class="close"></div>
             </div>
@@ -269,7 +266,7 @@ let request = function () {
                 <input type="checkbox" name="checkbox" class="checkbox__input" id="checkbox "">
                 <span class="checkbox__span"></span>
             </label>
-            <p class="text__task">${parseJ[i].title}</p>
+            <p class="text__task" translate="no">${parseJ[i].title}</p>
                 </div>
                 <div class="close"></div>
             </div>
@@ -277,9 +274,6 @@ let request = function () {
             }
             checked()
             deleteTask()
-
-
-
         }
     })
 }

@@ -37,8 +37,15 @@ body {
 
 .body {
   display: block;
-  position: relative; }
+  position: relative;
+  animation-duration: 5s;
+  animation-name: fade; }
 
+@keyframes fade {
+  from {
+    visibility: visible; }
+  to {
+    visibility: hidden; } }
 .body::before {
   content: "";
   display: block;
@@ -316,10 +323,10 @@ body {
   padding: 30px 25px;
   top: 40vh;
   right: calc(50% - 99px);
-  animation-name: animate;
+  animation-name: user;
   animation-duration: 1s; }
 
-@keyframes animate {
+@keyframes user {
   0% {
     opacity: 0; }
   100% {
