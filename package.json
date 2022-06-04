@@ -1,0 +1,25 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build":"parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naloyka/TODO-list.git"
+  },
+  "author": "Elena Naloeva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naloyka/TODO-list/issues"
+  },
+  "homepage": "https://github.com/Naloyka/TODO-list#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.52.2"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
