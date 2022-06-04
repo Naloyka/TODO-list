@@ -1,10 +1,9 @@
 /* Option */
 
 const selectOption = document.querySelector(".select__option")
-const containerOption = document.querySelector(".container__option")
+const containerOption = document.querySelector(".option__items")
 const body = document.getElementsByTagName("body")
 const pasteTask = document.querySelector(".paste__task")
-
 
 selectOption.addEventListener("click", () => {
     selectOption.classList.toggle("select__option_active")
@@ -21,16 +20,15 @@ const closeUser = document.querySelector(".close__user")
 const containerUser = document.querySelector(".container__user")
 const bodyContent = document.querySelector(".body")
 
-let closePopup = function() {
+let closePopup = function () {
     closeUser.addEventListener("click", () => {
         containerUser.style = "display: none"
         bodyContent.classList.remove("body")
-        
+
     })
     unload()
 }
 closePopup()
-
 
 /* Меняем иконку фильтра */
 
@@ -76,7 +74,6 @@ option.forEach(item => {
             }
         }
     })
-
 })
 
 
@@ -87,14 +84,11 @@ const containerInput = document.querySelector(".container__input")
 const input = document.querySelector(".input")
 
 function addTask() {
-    
-    add.addEventListener("click", () => {
+
+    let addTaskItem = function () {
         if (input.value === "") {
             return
         }
-
-       
-
         pasteTask.insertAdjacentHTML('afterbegin', `
         <div class="container__task">
             <div class="task">
@@ -105,77 +99,69 @@ function addTask() {
                     </label>
                     <p class="text__task" translate="no">${input.value}</p>
                 </div>
-            <div class="close"></div>
+            <button class="close"></button>
             </div>
         </div>`)
         input.value = "";
         checked()
-        deleteTask()
         load()
+        deleteTask()
+    }
+
+    add.addEventListener("click", () => {
+        
+        addTaskItem()
     })
+
+
 
     input.addEventListener("keyup", (e) => {
 
-        if (input.value === "") {
-            return
-        }
-
         if (e.key === "Enter") {
-            pasteTask.insertAdjacentHTML('afterbegin', `
-            <div class="container__task">
-                <div class="task">
-                    <div class="task__item">
-                        <label class="checkbox__label">
-                            <input type="checkbox" name="checkbox" class="checkbox__input" id="checkbox">
-                            <span class="checkbox__span"></span>
-                        </label>
-                        <p class="text__task" translate="no">${input.value}</p>
-                    </div>
-                <div class="close"></div>
-                </div>
-            </div>`)
-            input.value = "";
-            checked()
-            deleteTask()
-            load()
+            addTaskItem()
         }
     })
+
+
+
 }
 addTask()
 
 
 /*Удалить задачу */
 
-function deleteTask() {
+let deleteTask = function () {
 
-    const close = Array.from(document.querySelectorAll(".close"))
-    for (let item of close) {
-        item.addEventListener("click", () => {
+    let close = Array.from(document.querySelectorAll(".close"))
+
+    close.forEach(item => {
+        item.addEventListener("click", (e) => {
 
             let deleteElement = item.closest(".container__task")
+            console.log(e.target)
+
             deleteElement.remove()
             localStorage.clear()
             load()
         })
-    }
+    })
 }
+deleteTask()
 
-/*Зачеркивание текста */
+/*Зачеркнуть текст */
 
 function checked() {
 
     const checkboxInput = Array.from(document.querySelectorAll(".checkbox__input"))
     const textTask = Array.from(document.querySelectorAll(".text__task"))
 
-    for (i = 0; i < checkboxInput.length; i++) {
-
-        let count = i;
+    for (let i = 0; i < checkboxInput.length; i++) {
 
         checkboxInput[i].addEventListener("click", () => {
-            if (checkboxInput[count].checked) {
-                textTask[count].classList.add("text__task_done")
+            if (checkboxInput[i].checked) {
+                textTask[i].classList.add("text__task_done")
             } else {
-                textTask[count].classList.remove("text__task_done")
+                textTask[i].classList.remove("text__task_done")
             }
             load()
         })
@@ -203,7 +189,6 @@ let load = function () {
         }
     }
 }
-
 
 /* Загрузка состояния задачи*/
 
@@ -236,14 +221,10 @@ function unload() {
             </label>
             <p class="text__task ${flagClass}" translate="no">${textContent}</p>
                 </div>
-                <div class="close"></div>
+                <button class="close"></button>
             </div>
             </div>`)
         }
-        checked()
-        deleteTask()
-        
-
     })
 }
 
@@ -258,7 +239,7 @@ let request = function () {
         if (xhr.readyState === xhr.DONE) {
             let parseJ = JSON.parse(xhr.responseText)
             for (let i = 0; i < 5; i++) {
-                pasteTask.insertAdjacentHTML('afterend', `
+                pasteTask.insertAdjacentHTML('beforeend', `
             <div class="container__task" data-flag="server">
             <div class="task">
             <div class="task__item">
@@ -268,7 +249,7 @@ let request = function () {
             </label>
             <p class="text__task" translate="no">${parseJ[i].title}</p>
                 </div>
-                <div class="close"></div>
+                <button class="close"></button>
             </div>
             </div>`)
             }
@@ -277,3 +258,4 @@ let request = function () {
         }
     })
 }
+
