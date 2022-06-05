@@ -6,9 +6,10 @@
     bottom: 3px;
     height: 32px;
     width: 32px;
-    border: 2px solid #55B8FF;
     background-color: #55B8FF;
     cursor: pointer;
+    border: none;
+    padding: 8px;
 }
 
 .plus {
@@ -21,7 +22,7 @@
         position: absolute;
         display: block;
         border: 1px solid white;
-        width: 13px;
+        width: 100%
     }
 
     &:before {
