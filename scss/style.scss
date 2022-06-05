@@ -54,7 +54,7 @@ body {
 .body {
     display: block;
     position: relative;
-    animation-duration: 5s;
+    animation-duration: 0.5s;
     animation-name: fade;
 }
 
@@ -183,7 +183,7 @@ body {
     margin-top: 5px;
     min-height: 44px;
     animation-name: task;
-    animation-duration: 0.5s
+    animation-duration: 0.7s;
 }
 
 @keyframes task {
@@ -279,7 +279,7 @@ body {
     top: 40vh;
     right: calc(50% - 99px);
     animation-name: user;
-    animation-duration: 1s
+    animation-duration: 0.5;
 }
 
 .img__user {
