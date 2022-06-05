@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel index.html"
+    "build": "parcel build --no-minify --public-url /TODO-list/ index.html"
   },
   "repository": {
     "type": "git",
