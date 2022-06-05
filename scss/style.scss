@@ -26,8 +26,9 @@
     font-style: normal;
 }
 
-
 @import './components/checkbox.scss';
+@import './scss/components/add.scss';
+@import "./components/select_option.scss";
 
 $colorMain: #f2f2f2;
 
@@ -51,7 +52,6 @@ body {
 }
 
 .body {
-
     display: block;
     position: relative;
     animation-duration: 5s;
@@ -62,12 +62,10 @@ body {
     from {
         visibility: visible;
     }
-
     to {
         visibility: hidden;
     }
 }
-
 
 .body::before {
     content: "";
@@ -117,9 +115,6 @@ body {
     font-weight: bold;
 }
 
-/*main*/
-
-
 .container__main {
     background-color: $colorMain;
     display: block;
@@ -141,72 +136,6 @@ body {
 
 .text__todo {
     font-weight: bold;
-}
-
-.select__option {
-    font-weight: bold;
-    border-color: inherit;
-    background-color: inherit;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.select__option:focus {
-    background-color: inherit;
-}
-
-.select__option::after {
-    content: "";
-    display: inline-block;
-    background-image: url("../Image/Vector\ \(Stroke\)2.png");
-    width: 9px;
-    height: 6px;
-    margin-left: 7px;
-}
-
-.select__option_active {
-    font-weight: bold;
-    cursor: pointer;
-    background-color: inherit;
-}
-
-.select__option_active::after {
-    content: "";
-    display: inline-block;
-    background-image: url("../Image/Vector\ \(Stroke\)1.png");
-    width: 9px;
-    height: 6px;
-    margin-left: 7px;
-}
-
-.option__items {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 34px;
-    z-index: 5;
-    padding: 15px 20px;
-    background-color: white;
-}
-
-.option {
-    display: block;
-    height: 36px;
-    width: 150px;
-}
-
-.option__link {
-    cursor: pointer;
-}
-
-.option__link:hover {
-    display: block;
-    font-weight: bold;
-    background-image: url("../Image/Vector3.png");
-    background-repeat: no-repeat;
-    background-position: center right 0;
 }
 
 .container__input {
@@ -231,38 +160,6 @@ body {
 
 ::-webkit-input-placeholder {
     font-size: 14px;
-}
-
-.add {
-    display: block;
-    position: absolute;
-    right: 3px;
-    top:3px;
-    bottom: 3px;
-    height: 32px;
-    width: 32px;
-    border: 2px solid #55B8FF;
-    background-color: #55B8FF;
-    cursor: pointer;
-}
-
-.plus {
-    display: block;
-    position: relative;
-}
-
-.plus::after,
-.plus:before {
-    content: "";
-    position: absolute;
-    display: block;
-    border: 1px solid white;
-    width: 13px;
-    
-}
-
-.plus:before {
-    transform: rotate(-90deg);
 }
 
 .link__contact {
@@ -310,13 +207,11 @@ body {
     overflow: hidden;
 }
 
-
 .task__item {
     display: flex;
     width: 100%;
     overflow: hidden;
     align-items:center;
-
 }
 
 .state__task {
@@ -367,7 +262,6 @@ body {
 .close:focus{
     outline: #BFC6D0 1px solid;
 }
-
 
 /*всплывающее окно*/
 
@@ -422,7 +316,6 @@ body {
 
 .item__user {
     list-style-type: none;
-
 }
 
 .header__user {
@@ -460,7 +353,6 @@ body {
     cursor: pointer;
 }
 
-.close__user:focus {
-    
+.close__user:focus { 
     outline: 1px solid #BFC6D0;
 }

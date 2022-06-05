@@ -1,0 +1,32 @@
+.add {
+    display: block;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    height: 32px;
+    width: 32px;
+    border: 2px solid #55B8FF;
+    background-color: #55B8FF;
+    cursor: pointer;
+}
+
+.plus {
+    display: block;
+    position: relative;
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        border: 1px solid white;
+        width: 13px;
+    }
+
+    &:before {
+        transform: rotate(-90deg);
+    }
+
+
+}

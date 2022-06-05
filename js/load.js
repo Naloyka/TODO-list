@@ -1,9 +1,7 @@
 export function load() {
 
     const containerTask = Array.from(document.querySelectorAll(".container__task"))
-
     const arraySaveTasks = []
-    console.log(arraySaveTasks)
 
     for (let i = 0; i < containerTask.length; i++) {
 
@@ -17,9 +15,7 @@ export function load() {
             }
 
             arraySaveTasks.push(task)
-
             localStorage.setItem('tasks', JSON.stringify(arraySaveTasks))
-            console.log(localStorage.getItem('tasks'))
         }
     }
 }

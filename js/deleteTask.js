@@ -8,8 +8,6 @@ export function deleteTask() {
         item.addEventListener("click", (e) => {
 
             let deleteElement = item.closest(".container__task")
-            console.log(e.target)
-
             deleteElement.remove()
             localStorage.clear()
             load()
