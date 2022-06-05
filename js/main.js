@@ -118,6 +118,5 @@ function addTask() {
 addTask()
 loadTaskState()
 deleteTask()
-loadTaskState();
 loadRemoteTasks();
 
