@@ -103,15 +103,20 @@ function addTask() {
         addTaskItem()
     })
 
+
+
     input.addEventListener("keyup", (e) => {
 
         if (e.key === "Enter") {
             addTaskItem()
         }
     })
-}
 
+
+
+}
 addTask()
+loadTaskState()
 deleteTask()
 loadTaskState();
 loadRemoteTasks();

@@ -3,24 +3,15 @@ import { getTaskHTML } from "./getTaskHTML";
 const pasteTask = document.querySelector(".paste__task")
 
 export function loadTaskState() {
-    window.addEventListener("load", () => {
-        for (let i = 0; i < localStorage.length; i++) {
-            let openTask = JSON.parse(localStorage[i])
-            let textContent = openTask.textContent
-            let checkboxInput = Boolean(openTask.checked)
 
-            let flagChecked;
-            let flagClass;
+    const openSaveTasks = JSON.parse(localStorage.getItem("tasks"))
+    console.log(openSaveTasks)
 
-            if (checkboxInput) {
-                flagChecked = "checked"
-                flagClass = "text__task_done"
-            } else {
-                flagChecked = ""
-                flagClass = ""
-            }
+    for (let i = 0; i < openSaveTasks.length; i++) {
+        console.log
+        const textContent = openSaveTasks[i].textContent
+        const checked = Boolean(openSaveTasks[i].checked)
 
-            pasteTask.insertAdjacentHTML('beforeend', getTaskHTML(textContent, flagChecked, false))
-        }
-    })
+        pasteTask.insertAdjacentHTML('beforeend', getTaskHTML(textContent, checked, false))
+    }
 }
