@@ -388,4 +388,4 @@ addTask();
 (0, _loadStateTask.loadTaskState)();
 (0, _loadRemoteTasks.loadRemoteTasks)();
 },{"./loadStateTask":"MbzG","./loadRemoteTasks":"TlJU","./getTaskHTML":"bM6Q","./deleteTask":"Vng4","./checked":"ZRZM","./load":"zgpx"}]},{},["d6sW"], null)
-//# sourceMappingURL=/main.d255ce1b.js.map
+//# sourceMappingURL=/TODO-list/main.d255ce1b.js.map
