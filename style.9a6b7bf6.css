@@ -159,6 +159,7 @@ body {
 .select__option {
   font-weight: bold;
   border-color: inherit;
+  background-color: inherit;
   border: none;
   font-size: 16px;
   cursor: pointer;
@@ -465,4 +466,4 @@ body {
   outline: 1px solid #BFC6D0;
 }
 
-/*# sourceMappingURL=/TODO-list/style.57732d95.css.map */
+/*# sourceMappingURL=/TODO-list/style.9a6b7bf6.css.map */

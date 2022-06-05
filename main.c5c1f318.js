@@ -141,25 +141,15 @@ var _getTaskHTML = require("./getTaskHTML");
 var pasteTask = document.querySelector(".paste__task");
 
 function loadTaskState() {
-  window.addEventListener("load", function () {
-    for (var i = 0; i < localStorage.length; i++) {
-      var openTask = JSON.parse(localStorage[i]);
-      var textContent = openTask.textContent;
-      var checkboxInput = Boolean(openTask.checked);
-      var flagChecked = void 0;
-      var flagClass = void 0;
+  var openSaveTasks = JSON.parse(localStorage.getItem("tasks"));
+  console.log(openSaveTasks);
 
-      if (checkboxInput) {
-        flagChecked = "checked";
-        flagClass = "text__task_done";
-      } else {
-        flagChecked = "";
-        flagClass = "";
-      }
-
-      pasteTask.insertAdjacentHTML('beforeend', (0, _getTaskHTML.getTaskHTML)(textContent, flagChecked, false));
-    }
-  });
+  for (var i = 0; i < openSaveTasks.length; i++) {
+    console.log;
+    var textContent = openSaveTasks[i].textContent;
+    var checked = Boolean(openSaveTasks[i].checked);
+    pasteTask.insertAdjacentHTML('beforeend', (0, _getTaskHTML.getTaskHTML)(textContent, checked, false));
+  }
 }
 },{"./getTaskHTML":"bM6Q"}],"zgpx":[function(require,module,exports) {
 "use strict";
@@ -171,6 +161,8 @@ exports.load = load;
 
 function load() {
   var containerTask = Array.from(document.querySelectorAll(".container__task"));
+  var arraySaveTasks = [];
+  console.log(arraySaveTasks);
 
   for (var i = 0; i < containerTask.length; i++) {
     if (containerTask[i].getAttribute("data-flag") !== "server") {
@@ -180,8 +172,9 @@ function load() {
         "checked": childTask,
         "textContent": textTask
       };
-      var objTask = JSON.stringify(task);
-      localStorage.setItem("".concat(i), objTask);
+      arraySaveTasks.push(task);
+      localStorage.setItem('tasks', JSON.stringify(arraySaveTasks));
+      console.log(localStorage.getItem('tasks'));
     }
   }
 }
@@ -384,8 +377,9 @@ function addTask() {
 }
 
 addTask();
+(0, _loadStateTask.loadTaskState)();
 (0, _deleteTask.deleteTask)();
 (0, _loadStateTask.loadTaskState)();
 (0, _loadRemoteTasks.loadRemoteTasks)();
 },{"./loadStateTask":"MbzG","./loadRemoteTasks":"TlJU","./getTaskHTML":"bM6Q","./deleteTask":"Vng4","./checked":"ZRZM","./load":"zgpx"}]},{},["d6sW"], null)
-//# sourceMappingURL=/TODO-list/main.d255ce1b.js.map
+//# sourceMappingURL=/TODO-list/main.c5c1f318.js.map
