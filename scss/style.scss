@@ -212,6 +212,7 @@ body {
     width: 100%;
     overflow: hidden;
     align-items:center;
+    margin-right: 10px;
 }
 
 .state__task {
@@ -244,13 +245,13 @@ body {
     text-decoration: line-through;
 }
 
-.close {
+.close , .close__user {
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     margin-top: auto;
     margin-bottom: auto;
-    background-image: url("../Image/Vector\ \(Stroke\).png");
+    background-image: url("/Image/icon-close.svg");
     background-position: center;
     border: none;
     background-repeat: no-repeat;
@@ -259,8 +260,15 @@ body {
     cursor: pointer;
 }
 
-.close:focus{
+.close:focus, .close__user:focus {
     outline: #BFC6D0 1px solid;
+}
+
+.close__user {
+    top: 10px;
+    right: 10px;
+    background-image: url("/Image/icon-close.svg");
+    position: absolute;
 }
 
 /*всплывающее окно*/
@@ -279,7 +287,7 @@ body {
     top: 40vh;
     right: calc(50% - 99px);
     animation-name: user;
-    animation-duration: 0.5;
+    animation-duration: 0.5s;
 }
 
 .img__user {
@@ -335,24 +343,4 @@ body {
 .link__user {
     display: inline-block;
     font-size: 12px;
-}
-
-
-.close__user {
-    display: block;
-    width: 12px;
-    height: 12px;
-    top: 10px;
-    right: 10px;
-    background-image: url("../Image/Vector (Stroke).png");
-    background-position: center;
-    position: absolute;
-    border: none;
-    background-repeat: no-repeat;
-    background-color: white;
-    cursor: pointer;
-}
-
-.close__user:focus { 
-    outline: 1px solid #BFC6D0;
 }

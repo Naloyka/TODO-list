@@ -4,7 +4,7 @@
 
         &:before {
             content: "";
-            background-image: url("../Image/Rectangle\ 1.png");
+            background-image: url("/Image/square-checkbox.svg");
             background-repeat: no-repeat;
             display: block;
             width: 13px;
@@ -22,7 +22,7 @@
         clip: rect(1px, 1px, 1px, 1px);
 
         &:checked + .checkbox__label::before {
-            background-image: url("../Image/Component\ 1.png");
+            background-image: url("/Image/checkbox-checked.svg");
         }
         &:focus + .checkbox__label::before{
             outline: solid 1px #BFC6D0;
