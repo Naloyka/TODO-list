@@ -28,7 +28,7 @@
 }
 .checkbox__label:before {
   content: "";
-  background-image: url("/TODO-list/Rectangle 1.0f7895de.png");
+  background-image: url("/TODO-list/square-checkbox.c3175a1b.svg");
   background-repeat: no-repeat;
   display: block;
   width: 13px;
@@ -44,7 +44,7 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 .checkbox__input:checked + .checkbox__label::before {
-  background-image: url("/TODO-list/Component 1.e5cec97f.png");
+  background-image: url("/TODO-list/checkbox-checked.671f68f8.svg");
 }
 .checkbox__input:focus + .checkbox__label::before {
   outline: solid 1px #BFC6D0;
@@ -318,6 +318,7 @@ body {
   width: 100%;
   overflow: hidden;
   align-items: center;
+  margin-right: 10px;
 }
 
 .state__task {
@@ -350,13 +351,13 @@ body {
   text-decoration: line-through;
 }
 
-.close {
+.close, .close__user {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   margin-top: auto;
   margin-bottom: auto;
-  background-image: url("/TODO-list/Vector (Stroke).ae4d1ff7.png");
+  background-image: url("/TODO-list/icon-close.7961f5b5.svg");
   background-position: center;
   border: none;
   background-repeat: no-repeat;
@@ -365,8 +366,15 @@ body {
   cursor: pointer;
 }
 
-.close:focus {
+.close:focus, .close__user:focus {
   outline: #BFC6D0 1px solid;
+}
+
+.close__user {
+  top: 10px;
+  right: 10px;
+  background-image: url("/TODO-list/icon-close.7961f5b5.svg");
+  position: absolute;
 }
 
 /*всплывающее окно*/
@@ -384,7 +392,7 @@ body {
   top: 40vh;
   right: calc(50% - 99px);
   animation-name: user;
-  animation-duration: 0.5;
+  animation-duration: 0.5s;
 }
 
 .img__user {
@@ -440,23 +448,4 @@ body {
   font-size: 12px;
 }
 
-.close__user {
-  display: block;
-  width: 12px;
-  height: 12px;
-  top: 10px;
-  right: 10px;
-  background-image: url("/TODO-list/Vector (Stroke).ae4d1ff7.png");
-  background-position: center;
-  position: absolute;
-  border: none;
-  background-repeat: no-repeat;
-  background-color: white;
-  cursor: pointer;
-}
-
-.close__user:focus {
-  outline: 1px solid #BFC6D0;
-}
-
-/*# sourceMappingURL=/TODO-list/style.ec94dd18.css.map */
+/*# sourceMappingURL=/TODO-list/style.b039e232.css.map */
