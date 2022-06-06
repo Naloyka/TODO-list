@@ -14,7 +14,7 @@
 @font-face {
   font-family: Spartan;
   src: url("/TODO-list/SpartanMB-Regular.9e10aacb.otf");
-  font-weight: 800;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -267,7 +267,8 @@ body {
 }
 
 ::-webkit-input-placeholder {
-  font-size: 14px;
+  font-size: 12px;
+  color: #BAC2CD;
 }
 
 .link__contact {
@@ -285,7 +286,7 @@ body {
 .container__task {
   display: block;
   height: auto;
-  padding: 10px 15px;
+  padding: 15px 10px;
   width: 100%;
   background-color: white;
   margin-top: 5px;
@@ -448,4 +449,4 @@ body {
   font-size: 12px;
 }
 
-/*# sourceMappingURL=/TODO-list/style.b039e232.css.map */
+/*# sourceMappingURL=/TODO-list/style.883822a1.css.map */
