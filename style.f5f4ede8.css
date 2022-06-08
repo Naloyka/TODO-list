@@ -166,15 +166,6 @@ body {
   animation-duration: 0.5s;
   animation-name: fade;
 }
-
-@keyframes fade {
-  from {
-    visibility: visible;
-  }
-  to {
-    visibility: hidden;
-  }
-}
 .body::before {
   content: "";
   display: block;
@@ -186,6 +177,14 @@ body {
   opacity: 0.3;
 }
 
+@keyframes fade {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
 .header__todo {
   width: auto;
   height: 46px;
@@ -200,7 +199,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .header__menu_main-information {
   display: flex;
   gap: 5px;
@@ -210,17 +208,16 @@ body {
   display: block;
   height: 100%;
 }
-
-.logo__avtograph_img {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .title__avtograph_link {
   text-transform: uppercase;
   display: block;
   margin-left: 4px;
   font-weight: bold;
+}
+
+.logo__avtograph_img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .main {
@@ -257,7 +254,6 @@ body {
   background-color: white;
   margin-bottom: 10px;
 }
-
 .input__add-task_entry-field {
   display: block;
   border: none;
@@ -277,9 +273,7 @@ body {
   display: flex;
   gap: 15px;
 }
-
-.contact__avtograph_mail,
-.contact__avtograph_tel {
+.contact__avtograph_tel, .contact__avtograph_mail {
   display: block;
   width: 16px;
   height: 16px;
@@ -296,6 +290,9 @@ body {
   animation-name: task;
   animation-duration: 0.7s;
 }
+.container__task_hidden {
+  display: none;
+}
 
 @keyframes task {
   0% {
@@ -305,10 +302,6 @@ body {
     opacity: 1;
   }
 }
-.container__task_hidden {
-  display: none;
-}
-
 .task {
   display: flex;
   justify-content: space-between;
@@ -334,8 +327,7 @@ body {
   margin-right: 10px;
   padding: 2px;
 }
-
-.state__task::before {
+.state__task ::before {
   content: "";
   display: block;
   width: 5px;
@@ -349,7 +341,6 @@ body {
   overflow: hidden;
   width: auto;
 }
-
 .text__task_done {
   text-decoration: line-through;
 }
@@ -369,7 +360,6 @@ body {
   margin-right: 2px;
   cursor: pointer;
 }
-
 .close:focus,
 .close__user:focus {
   outline: #BFC6D0 1px solid;
@@ -430,10 +420,6 @@ body {
   height: 88px;
 }
 
-.item__user {
-  list-style-type: none;
-}
-
 .profile__information {
   display: flex;
   gap: 10px;
@@ -453,4 +439,4 @@ body {
   font-size: 12px;
 }
 
-/*# sourceMappingURL=/TODO-list/style.860dd205.css.map */
+/*# sourceMappingURL=/TODO-list/style.f5f4ede8.css.map */
