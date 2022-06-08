@@ -1,27 +1,27 @@
 @font-face {
     font-family: Noto Sans;
-    src: url("../font/Noto_Sans/NotoSans-Regular.ttf");
+    src: url("/font/Noto_Sans/NotoSans-Regular.ttf");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: Noto Sans;
-    src: url("../font/Noto_Sans/NotoSans-Bold.ttf");
+    src: url("/font/Noto_Sans/NotoSans-Bold.ttf");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: Spartan;
-    src: url("../font/Spartan-MB-Regular/SpartanMB-Regular.otf");
+    src: url("/font/Spartan-MB-Regular/SpartanMB-Regular.otf");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: Spartan;
-    src: url("../font/Spartan-MB-Regular/SpartanMB-Bold.otf");
+    src: url("/font/Spartan-MB-Regular/SpartanMB-Bold.otf");
     font-weight: 800;
     font-style: normal;
 }
@@ -62,6 +62,7 @@ body {
     from {
         visibility: visible;
     }
+
     to {
         visibility: hidden;
     }
@@ -78,7 +79,7 @@ body {
     opacity: 0.3;
 }
 
-.container__todo {
+.header__todo {
     width: auto;
     height: 46px;
     display: block;
@@ -86,36 +87,36 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.container__header {
+.header__menu {
     display: flex;
     height: 14px;
     align-items: center;
     justify-content: space-between;
 }
 
-.wrapper__information {
+.header__menu_main-information {
     display: flex;
     gap: 5px;
 }
 
-.container__main-link {
+.title__avtograph {
     display: block;
     height: 100%;
 }
 
-.logo {
+.logo__avtograph_img {
     display: inline-block;
     vertical-align: middle;
 }
 
-.link__home {
+.title__avtograph_link {
     text-transform: uppercase;
     display: block;
     margin-left: 4px;
     font-weight: bold;
 }
 
-.container__main {
+.main {
     background-color: $colorMain;
     display: block;
     width: 100%;
@@ -136,9 +137,10 @@ body {
 
 .text__todo {
     font-weight: bold;
+    font-family: Spartan;
 }
 
-.container__input {
+.input__add-task {
     display: flex;
     position: relative;
     width: 100%;
@@ -149,7 +151,7 @@ body {
     margin-bottom: 10px;
 }
 
-.input {
+.input__add-task_entry-field {
     display: block;
     border: none;
     -webkit-appearance: none;
@@ -164,13 +166,13 @@ body {
     color: #BAC2CD;
 }
 
-.link__contact {
+.contact__avtograph {
     display: flex;
     gap: 15px;
 }
 
-.mail,
-.tel {
+.contact__avtograph_mail,
+.contact__avtograph_tel {
     display: block;
     width: 16px;
     height: 16px;
@@ -199,7 +201,7 @@ body {
 }
 
 .container__task_hidden {
-    display: none; 
+    display: none;
 }
 
 .task {
@@ -213,7 +215,7 @@ body {
     display: flex;
     width: 100%;
     overflow: hidden;
-    align-items:center;
+    align-items: center;
     margin-right: 10px;
 }
 
@@ -247,7 +249,8 @@ body {
     text-decoration: line-through;
 }
 
-.close , .close__user {
+.close,
+.close__user {
     display: block;
     width: 8px;
     height: 8px;
@@ -262,7 +265,8 @@ body {
     cursor: pointer;
 }
 
-.close:focus, .close__user:focus {
+.close:focus,
+.close__user:focus {
     outline: #BFC6D0 1px solid;
 }
 
@@ -275,7 +279,7 @@ body {
 
 /*всплывающее окно*/
 
-.container__user {
+.profile__popup {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,13 +296,13 @@ body {
     animation-duration: 0.5s;
 }
 
-.img__user {
+.profile__login_icon {
     display: block;
     width: 22px;
     height: 22px;
 }
 
-.img__user__item {
+.profile-menu__icon {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -315,7 +319,7 @@ body {
     }
 }
 
-.container__user__items {
+.profile__menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -328,7 +332,7 @@ body {
     list-style-type: none;
 }
 
-.header__user {
+.profile__information {
     display: flex;
     gap: 10px;
     width: 137px;
@@ -336,13 +340,13 @@ body {
     height: 36px;
 }
 
-.title {
+.profile__name_user {
     text-transform: uppercase;
     font-family: Spartan;
     font-weight: bold;
 }
 
-.link__user {
+.profile-menu__link {
     display: inline-block;
     font-size: 12px;
 }

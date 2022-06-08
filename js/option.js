@@ -41,18 +41,18 @@ export function changeIconOptions() {
         const meaning = e.currentTarget.textContent;
         selectOption.textContent = meaning
         containerOption.style.display = "none"
-        selectOption.classList.toggle("select__option_active")
+        selectOption.classList.toggle("btn__select_active")
     }))
 }
 
-const selectOption = document.querySelector(".select__option")
+const selectOption = document.querySelector(".btn__select")
 const containerOption = document.querySelector(".option__items")
 const body = document.getElementsByTagName("body")
 
 
 export function hideSelect() {
     selectOption.addEventListener("click", () => {
-        selectOption.classList.toggle("select__option_active")
+        selectOption.classList.toggle("btn__select_active")
         if (containerOption.style.display == "block") {
             containerOption.style.display = "none"
         } else {

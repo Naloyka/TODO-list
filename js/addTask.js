@@ -3,9 +3,9 @@ import { checked } from "./checked"
 import { load } from "./load"
 import { deleteTask } from "./deleteTask"
 
-const add = document.querySelector(".add")
-const containerInput = document.querySelector(".container__input")
-const input = document.querySelector(".input")
+const add = document.querySelector(".button__add-task")
+const containerInput = document.querySelector(".input__add-task")
+const input = document.querySelector(".input__add-task_entry-field")
 const pasteTask = document.querySelector(".paste__task")
 
 export function addTask() {
