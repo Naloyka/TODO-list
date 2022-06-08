@@ -56,6 +56,17 @@ body {
     position: relative;
     animation-duration: 0.5s;
     animation-name: fade;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        z-index: 100;
+        opacity: 0.3;
+    }
 }
 
 @keyframes fade {
@@ -66,17 +77,6 @@ body {
     to {
         visibility: hidden;
     }
-}
-
-.body::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    z-index: 100;
-    opacity: 0.3;
 }
 
 .header__todo {
@@ -92,28 +92,28 @@ body {
     height: 14px;
     align-items: center;
     justify-content: space-between;
-}
 
-.header__menu_main-information {
-    display: flex;
-    gap: 5px;
+    &_main-information {
+        display: flex;
+        gap: 5px;
+    }
 }
 
 .title__avtograph {
     display: block;
     height: 100%;
+
+    &_link {
+        text-transform: uppercase;
+        display: block;
+        margin-left: 4px;
+        font-weight: bold;
+    }
 }
 
 .logo__avtograph_img {
     display: inline-block;
     vertical-align: middle;
-}
-
-.title__avtograph_link {
-    text-transform: uppercase;
-    display: block;
-    margin-left: 4px;
-    font-weight: bold;
 }
 
 .main {
@@ -149,16 +149,16 @@ body {
     margin-top: 26px;
     background-color: white;
     margin-bottom: 10px;
-}
 
-.input__add-task_entry-field {
-    display: block;
-    border: none;
-    -webkit-appearance: none;
-    padding: 14px;
-    height: 38px;
-    width: 100%;
-    font-size: 16px;
+    &_entry-field {
+        display: block;
+        border: none;
+        -webkit-appearance: none;
+        padding: 14px;
+        height: 38px;
+        width: 100%;
+        font-size: 16px;
+    }
 }
 
 ::-webkit-input-placeholder {
@@ -169,13 +169,13 @@ body {
 .contact__avtograph {
     display: flex;
     gap: 15px;
-}
 
-.contact__avtograph_mail,
-.contact__avtograph_tel {
-    display: block;
-    width: 16px;
-    height: 16px;
+    &_tel,
+    &_mail {
+        display: block;
+        width: 16px;
+        height: 16px;
+    }
 }
 
 .container__task {
@@ -188,6 +188,10 @@ body {
     min-height: 44px;
     animation-name: task;
     animation-duration: 0.7s;
+
+    &_hidden {
+        display: none;
+    }
 }
 
 @keyframes task {
@@ -198,10 +202,6 @@ body {
     100% {
         opacity: 1
     }
-}
-
-.container__task_hidden {
-    display: none;
 }
 
 .task {
@@ -228,25 +228,25 @@ body {
     margin-bottom: auto;
     margin-right: 10px;
     padding: 2px;
-}
 
-.state__task::before {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 5px;
-    background-color: #55B8FF;
-    border-radius: 50%;
+    ::before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: #55B8FF;
+        border-radius: 50%;
+    }
 }
 
 .text__task {
     display: block;
     overflow: hidden;
     width: auto;
-}
 
-.text__task_done {
-    text-decoration: line-through;
+    &_done {
+        text-decoration: line-through;
+    }
 }
 
 .close,
@@ -263,11 +263,10 @@ body {
     background-color: white;
     margin-right: 2px;
     cursor: pointer;
-}
 
-.close:focus,
-.close__user:focus {
-    outline: #BFC6D0 1px solid;
+    &:focus {
+        outline: #BFC6D0 1px solid;
+    }
 }
 
 .close__user {
@@ -326,10 +325,6 @@ body {
     margin-top: 10px;
     width: 80px;
     height: 88px;
-}
-
-.item__user {
-    list-style-type: none;
 }
 
 .profile__information {
