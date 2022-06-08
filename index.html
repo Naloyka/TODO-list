@@ -6,25 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Document</title>
-    <link rel="stylesheet" href="/TODO-list/style.5e72c267.css">
+    <link rel="stylesheet" href="/TODO-list/style.860dd205.css">
 </head>
 
 <body class="body">
-    <header class="container__todo">
-        <nav class="container__header">
-            <div class="wrapper__information">
-                <div class="container__logo">
-                    <svg class="logo" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <header class="header__todo">
+        <nav class="header__menu">
+            <div class="header__menu_main-information">
+                <div class="logo__avtograph">
+                    <svg class="logo__avtograph_img" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.1244 13.25L7.06218 2L1 13.25" stroke="#55B8FF" stroke-width="1.5"></path>
                         <path d="M4.82598 12L7.06218 7.64263L9.29838 12H4.82598Z" stroke="#55B8FF" stroke-width="1.5"></path>
                     </svg>
                 </div>
-                <div class="container__main-link">
-                    <h4 class="title__home"><a href="#" class="link__home" translate="no">Avtograph</a></h4>
+                <div class="title__avtograph">
+                    <h4 class="title__avtograpph__text"><a href="#" class="title__avtograph_link" translate="no">Avtograph</a></h4>
                 </div>
             </div>
-            <div class="link__contact">
-                <a href="mailto:y@mail.ru" class="mail">
+            <div class="contact__avtograph">
+                <a href="mailto:avtograrh@mail.ru" class="contact__avtograph_mail">
                     <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_3_13)">
                             <path d="M7.41611 6.66666L14.0833 3.27144V1.78829C14.0833 1.61893 14.0833 1.48148 14.0833 1.48148H0.75C0.75 1.48148 0.750009 1.61893 0.750009 1.78829V3.29414L7.41611 6.66666Z" fill="#171E29"></path>
@@ -37,7 +37,7 @@
                         </defs>
                     </svg>
                 </a>
-                <a href="tel:890765445678" class="tel">
+                <a href="tel:890765445678" class="contact__avtograph_tel">
                     <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.87474 7.01782C3.64652 7.01782 1.02008 10.0195 1.02008 13.7089C1.02008 13.8694 1.13413 13.9998 1.27464 13.9998H12.4749C12.6154 13.9998 12.7294 13.8694 12.7294 13.7089C12.7294 10.0195 10.103 7.01782 6.87474 7.01782Z" fill="#171E29"></path>
                         <path d="M6.87489 6.40011C8.42132 6.40011 9.67494 4.9674 9.67494 3.20006C9.67494 1.43271 8.42132 0 6.87489 0C5.32847 0 4.07484 1.43271 4.07484 3.20006C4.07484 4.9674 5.32847 6.40011 6.87489 6.40011Z" fill="#171E29"></path>
@@ -47,10 +47,10 @@
         </nav>
     </header>
 
-    <main class="container__main">
+    <main class="main">
         <div class="container__select">
             <h4 class="text__todo" translate="no">Autograph TODO list</h4>
-            <button class="select__option">Все</button>
+            <button class="btn__select">Все</button>
             <div class="option__items" style="display: none;">
                 <div class="option" data-value="1"><a class="option__link">Все</a></div>
                 <div class="option" data-value="2"><a class="option__link">Выполненные</a></div>
@@ -58,10 +58,10 @@
             </div>
         </div>
 
-        <div class="container__input">
-            <input type="text" class="input" placeholder="Поле ввода">
-            <button class="add">
-                <span class="plus"></span>
+        <div class="input__add-task">
+            <input type="text" class="input__add-task_entry-field" placeholder="Поле ввода">
+            <button class="button__add-task">
+                <span class="button__add-task_plus"></span>
             </button>
         </div>
 
@@ -69,41 +69,41 @@
 
     </main>
 
-    <div class="container__user">
+    <div class="profile__popup">
         <button class="close__user"></button>
-        <div class="user__content">
-            <header class="header__user">
-                <div class="container__img__user">
-                    <svg class="img__user" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="profile__content">
+            <header class="profile__information">
+                <div class="profile__login">
+                    <svg class="profile__login_icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 0C17.0665 0 22 4.93361 22 11C22 17.0664 17.0664 22 11 22C4.93361 22 0 17.0664 0 11C0 4.93361 4.93361 0 11 0ZM11 1.46663C5.72634 1.46663 1.46642 5.72618 1.46642 11.0002C1.46642 12.7852 1.95315 14.4547 2.80319 15.8816C4.81706 13.6343 7.74769 12.2224 10.9999 12.2224C14.2558 12.2224 17.1836 13.637 19.1966 15.8892C20.0489 14.4611 20.5334 12.7876 20.5334 11.0004C20.5334 5.7267 16.274 1.46663 11 1.46663ZM11 2.19995C13.5564 2.19995 15.6445 4.28799 15.6445 6.8444C15.6445 9.40082 13.5564 11.4889 11 11.4889C8.44359 11.4889 6.35554 9.40082 6.35554 6.8444C6.35554 4.28799 8.44359 2.19995 11 2.19995Z" fill="#55B8FF"></path>
                     </svg>
                 </div>
-                <div class="container__title">
-                    <h5 class="title" translate="no">user 7543</h5>
+                <div class="profile__name">
+                    <h5 class="profile__name_user" translate="no">user 7543</h5>
                 </div>
             </header>
 
-            <div class="container__user__items">
-                <div class="container__user__item">
-                    <svg class="img__user__item" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="profile__menu">
+                <div class="profile__menu_item">
+                    <svg class="profile-menu__icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.3062 7.25802C11.7668 8.45212 12.3095 9.89952 12.1286 12.2154C12.0924 12.5772 11.803 12.8667 11.4411 12.8667H1.09224C0.730389 12.8667 0.44091 12.5772 0.404725 12.2154C0.223801 9.89952 0.766574 8.45212 3.22714 7.25802C3.44425 7.11328 3.69755 7.14947 3.91466 7.29421C4.60217 7.72843 5.39824 7.98172 6.26667 7.98172C7.13511 7.98172 7.93118 7.72843 8.61869 7.29421C8.8358 7.14947 9.08909 7.11328 9.3062 7.25802Z" fill="#E0E6ED"></path>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.2667 0.600016C7.93121 0.600016 9.30623 1.97504 9.30623 3.63954C9.30623 5.30405 7.93121 6.67907 6.2667 6.67907C4.6022 6.67907 3.22717 5.30405 3.22717 3.63954C3.22717 1.97504 4.6022 0.600016 6.2667 0.600016Z" fill="#E0E6ED"></path>
                     </svg>
-                    <a href="#" class="link__user">Профиль</a>
+                    <a href="#" class="profile-menu__link">Профиль</a>
                 </div>
-                <div class="container__user__item">
-                    <svg class="img__user__item" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="profile__menu_item">
+                    <svg class="profile-menu__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.96869 12.274C11.1605 12.274 12.9374 10.3604 12.9374 8C12.9374 5.63955 11.1605 3.72603 8.96869 3.72603C6.77684 3.72603 5 5.69863 5 7.67123H6.22113C6.23522 7.78112 5 9.31507 5 9.31507C5.30528 10.9589 7.09206 12.274 8.96869 12.274ZM8.29911 8.27747V4.82213H9.36745V7.72301L10.7943 8.9475L10.1287 9.8475L8.29911 8.27747Z" fill="#E0E6ED"></path>
                         <path d="M9.01111 2C5.70868 2 3.02221 4.69162 3.02221 8H2L3.73333 10.1732L5.46683 8H4.17093C4.17093 5.32597 6.34203 3.15068 9.01127 3.15068C11.6802 3.15068 13.8516 5.32597 13.8516 8C13.8516 10.674 11.6802 12.8493 9.01127 12.8493C7.70865 12.8493 6.48626 12.3384 5.57004 11.4103L4.75341 12.2197C5.8872 13.3676 7.39919 14 9.01111 14C12.3132 14 15 11.3084 15 8C15 4.69162 12.3132 2 9.01111 2Z" fill="#E0E6ED"></path>
                     </svg>
-                    <a href="#" class="link__user">История</a>
+                    <a href="#" class="profile-menu__link">История</a>
                 </div>
-                <div class="container__user__item">
-                    <svg class="img__user__item" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="profile__menu_item">
+                    <svg class="profile-menu__icon" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.02306 7.64589C2.99673 7.62306 2.98739 7.58639 2.99956 7.55373C3.01173 7.52106 3.04289 7.49973 3.07773 7.49973H9.85046V7.50573V6.49973H3.07823C3.04356 6.49973 3.01223 6.47839 3.00006 6.44573C2.98806 6.41323 2.99723 6.37656 3.02356 6.35356L5.99993 3.80003L5.39993 3.00003L1.10856 6.69773C1.02556 6.77006 0.978058 6.88006 0.978058 6.99989C0.978058 7.11989 1.02556 7.23006 1.10856 7.30239L5.39993 11L5.99993 10.2L3.02306 7.64589Z" fill="#E0E6ED"></path>
                         <path d="M12.9999 0.599983H6.60005L6.59995 5.48767H10.786V8.43179H6.59995V13.4L12.9999 13.3193V0.599983Z" fill="#E0E6ED"></path>
                     </svg>
-                    <a href="#" class="link__user">Выйти</a>
+                    <a href="#" class="profile-menu__link">Выйти</a>
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@
 
 
 
-    <script src="/TODO-list/main.32e5294d.js"></script>
+    <script src="/TODO-list/main.70808a45.js"></script>
 </body>
 
 </html>

@@ -315,18 +315,18 @@ function changeIconOptions() {
       var meaning = e.currentTarget.textContent;
       selectOption.textContent = meaning;
       containerOption.style.display = "none";
-      selectOption.classList.toggle("select__option_active");
+      selectOption.classList.toggle("btn__select_active");
     });
   });
 }
 
-var selectOption = document.querySelector(".select__option");
+var selectOption = document.querySelector(".btn__select");
 var containerOption = document.querySelector(".option__items");
 var body = document.getElementsByTagName("body");
 
 function hideSelect() {
   selectOption.addEventListener("click", function () {
-    selectOption.classList.toggle("select__option_active");
+    selectOption.classList.toggle("btn__select_active");
 
     if (containerOption.style.display == "block") {
       containerOption.style.display = "none";
@@ -343,7 +343,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.closePopup = closePopup;
 var closeUser = document.querySelector(".close__user");
-var containerUser = document.querySelector(".container__user");
+var containerUser = document.querySelector(".profile__popup");
 var bodyContent = document.querySelector(".body");
 
 function closePopup() {
@@ -368,9 +368,9 @@ var _load = require("./load");
 
 var _deleteTask = require("./deleteTask");
 
-var add = document.querySelector(".add");
-var containerInput = document.querySelector(".container__input");
-var input = document.querySelector(".input");
+var add = document.querySelector(".button__add-task");
+var containerInput = document.querySelector(".input__add-task");
+var input = document.querySelector(".input__add-task_entry-field");
 var pasteTask = document.querySelector(".paste__task");
 
 function addTask() {
@@ -426,4 +426,4 @@ var _addTask = require("./addTask");
 (0, _closePopup.closePopup)();
 (0, _addTask.addTask)();
 },{"./loadStateTask":"MbzG","./loadRemoteTasks":"TlJU","./getTaskHTML":"bM6Q","./deleteTask":"Vng4","./checked":"ZRZM","./load":"zgpx","./option":"lMtw","./closePopup":"mmi3","./addTask":"Oc8k"}]},{},["d6sW"], null)
-//# sourceMappingURL=/TODO-list/main.32e5294d.js.map
+//# sourceMappingURL=/TODO-list/main.70808a45.js.map

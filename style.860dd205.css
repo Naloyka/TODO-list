@@ -50,7 +50,7 @@
   outline: solid 1px #BFC6D0;
 }
 
-.add {
+.button__add-task {
   display: block;
   position: absolute;
   right: 3px;
@@ -64,22 +64,22 @@
   padding: 8px;
 }
 
-.plus {
+.button__add-task_plus {
   display: block;
   position: relative;
 }
-.plus:after, .plus:before {
+.button__add-task_plus:after, .button__add-task_plus:before {
   content: "";
   position: absolute;
   display: block;
   border: 1px solid white;
   width: 100%;
 }
-.plus:before {
+.button__add-task_plus:before {
   transform: rotate(-90deg);
 }
 
-.select__option {
+.btn__select {
   font-weight: bold;
   border-color: inherit;
   background-color: inherit;
@@ -87,10 +87,10 @@
   font-size: 16px;
   cursor: pointer;
 }
-.select__option:focus {
+.btn__select:focus {
   background-color: inherit;
 }
-.select__option::after {
+.btn__select::after {
   content: "";
   display: inline-block;
   background-image: url("/TODO-list/Vector (Stroke)2.4514709b.png");
@@ -99,12 +99,12 @@
   margin-left: 7px;
 }
 
-.select__option_active {
+.btn__select_active {
   font-weight: bold;
   cursor: pointer;
   background-color: inherit;
 }
-.select__option_active::after {
+.btn__select_active::after {
   content: "";
   display: inline-block;
   background-image: url("/TODO-list/Vector (Stroke)1.c2f90ed3.png");
@@ -186,7 +186,7 @@ body {
   opacity: 0.3;
 }
 
-.container__todo {
+.header__todo {
   width: auto;
   height: 46px;
   display: block;
@@ -194,36 +194,36 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-.container__header {
+.header__menu {
   display: flex;
   height: 14px;
   align-items: center;
   justify-content: space-between;
 }
 
-.wrapper__information {
+.header__menu_main-information {
   display: flex;
   gap: 5px;
 }
 
-.container__main-link {
+.title__avtograph {
   display: block;
   height: 100%;
 }
 
-.logo {
+.logo__avtograph_img {
   display: inline-block;
   vertical-align: middle;
 }
 
-.link__home {
+.title__avtograph_link {
   text-transform: uppercase;
   display: block;
   margin-left: 4px;
   font-weight: bold;
 }
 
-.container__main {
+.main {
   background-color: #f2f2f2;
   display: block;
   width: 100%;
@@ -244,9 +244,10 @@ body {
 
 .text__todo {
   font-weight: bold;
+  font-family: Spartan;
 }
 
-.container__input {
+.input__add-task {
   display: flex;
   position: relative;
   width: 100%;
@@ -257,7 +258,7 @@ body {
   margin-bottom: 10px;
 }
 
-.input {
+.input__add-task_entry-field {
   display: block;
   border: none;
   -webkit-appearance: none;
@@ -272,13 +273,13 @@ body {
   color: #BAC2CD;
 }
 
-.link__contact {
+.contact__avtograph {
   display: flex;
   gap: 15px;
 }
 
-.mail,
-.tel {
+.contact__avtograph_mail,
+.contact__avtograph_tel {
   display: block;
   width: 16px;
   height: 16px;
@@ -353,7 +354,8 @@ body {
   text-decoration: line-through;
 }
 
-.close, .close__user {
+.close,
+.close__user {
   display: block;
   width: 8px;
   height: 8px;
@@ -368,7 +370,8 @@ body {
   cursor: pointer;
 }
 
-.close:focus, .close__user:focus {
+.close:focus,
+.close__user:focus {
   outline: #BFC6D0 1px solid;
 }
 
@@ -380,7 +383,7 @@ body {
 }
 
 /*всплывающее окно*/
-.container__user {
+.profile__popup {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,13 +400,13 @@ body {
   animation-duration: 0.5s;
 }
 
-.img__user {
+.profile__login_icon {
   display: block;
   width: 22px;
   height: 22px;
 }
 
-.img__user__item {
+.profile-menu__icon {
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -418,7 +421,7 @@ body {
     opacity: 1;
   }
 }
-.container__user__items {
+.profile__menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -431,7 +434,7 @@ body {
   list-style-type: none;
 }
 
-.header__user {
+.profile__information {
   display: flex;
   gap: 10px;
   width: 137px;
@@ -439,15 +442,15 @@ body {
   height: 36px;
 }
 
-.title {
+.profile__name_user {
   text-transform: uppercase;
   font-family: Spartan;
   font-weight: bold;
 }
 
-.link__user {
+.profile-menu__link {
   display: inline-block;
   font-size: 12px;
 }
 
-/*# sourceMappingURL=/TODO-list/style.5e72c267.css.map */
+/*# sourceMappingURL=/TODO-list/style.860dd205.css.map */
