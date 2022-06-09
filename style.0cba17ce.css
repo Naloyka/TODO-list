@@ -13,13 +13,13 @@
 }
 @font-face {
   font-family: "Spartan";
-  src: url("/TODO-list/LeagueSpartan-Regular.19512d88.ttf") format("ttf");
+  src: url("/TODO-list/SpartanMB-Regular.9e10aacb.otf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "League Spartan";
-  src: url("/TODO-list/LeagueSpartan-Bold.abaee651.ttf") format("ttf");
+  font-family: "Spartan";
+  src: url("/TODO-list/SpartanMB-Bold.b814363d.otf");
   font-weight: 800;
   font-style: normal;
 }
@@ -241,6 +241,7 @@ body {
 
 .text__todo {
   font-weight: bold;
+  font-family: Spartan;
 }
 
 .input__add-task {
@@ -438,4 +439,4 @@ body {
   font-size: 12px;
 }
 
-/*# sourceMappingURL=/TODO-list/style.fc9bda22.css.map */
+/*# sourceMappingURL=/TODO-list/style.0cba17ce.css.map */
