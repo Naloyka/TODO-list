@@ -282,27 +282,27 @@ function filterStateTasks() {
 
       if (item.getAttribute("data-value") == 3) {
         for (var i = 0; i < stateChecked.length; i++) {
-          containerTask[i].classList.remove("container__task_hidden");
+          containerTask[i].classList.remove("task__container_hidden");
 
           if (stateChecked[i].checked) {
-            containerTask[i].classList.add("container__task_hidden");
+            containerTask[i].classList.add("task__container_hidden");
           }
         }
       }
 
       if (item.getAttribute("data-value") == 2) {
         for (var _i = 0; _i < stateChecked.length; _i++) {
-          containerTask[_i].classList.remove("container__task_hidden");
+          containerTask[_i].classList.remove("task__container_hidden");
 
           if (stateChecked[_i].checked === false) {
-            containerTask[_i].classList.add("container__task_hidden");
+            containerTask[_i].classList.add("task__container_hidden");
           }
         }
       }
 
       if (item.getAttribute("data-value") == 1) {
         for (var _i2 = 0; _i2 < stateChecked.length; _i2++) {
-          containerTask[_i2].classList.remove("container__task_hidden");
+          containerTask[_i2].classList.remove("task__container_hidden");
         }
       }
     });
@@ -424,4 +424,4 @@ var _addTask = require("./addTask");
 (0, _option.hideSelect)();
 (0, _closePopup.closePopup)();
 },{"./loadStateTask":"MbzG","./loadRemoteTasks":"TlJU","./getTaskHTML":"bM6Q","./deleteTask":"Vng4","./checked":"ZRZM","./load":"zgpx","./option":"lMtw","./closePopup":"mmi3","./addTask":"Oc8k"}]},{},["d6sW"], null)
-//# sourceMappingURL=/TODO-list/main.450fa468.js.map
+//# sourceMappingURL=/TODO-list/main.a6e6dd86.js.map
