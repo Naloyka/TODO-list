@@ -14,14 +14,14 @@
 
 @font-face {
     font-family: 'Spartan';
-    src: url("/font/Spartan-MB-Regular/LeagueSpartan-Regular.ttf") format('ttf');
+    src: url('/font/Spartan-MB-Regular/SpartanMB-Regular.otf');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'League Spartan';
-    src: url("/font/Spartan-MB-Regular/LeagueSpartan-Bold.ttf") format('ttf');
+    font-family: 'Spartan';
+    src: url('/font/Spartan-MB-Regular/SpartanMB-Bold.otf');
     font-weight: 800;
     font-style: normal;
 }
@@ -136,6 +136,7 @@ body {
 
 .text__todo {
     font-weight: bold;
+    font-family: Spartan;
 }
 
 .input__add-task {
