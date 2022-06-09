@@ -1,25 +1,25 @@
 @charset "UTF-8";
 @font-face {
-  font-family: Noto Sans;
+  font-family: "Noto Sans";
   src: url("/TODO-list/NotoSans-Regular.1c7bb14b.ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: Noto Sans;
+  font-family: "Noto Sans";
   src: url("/TODO-list/NotoSans-Bold.b95d2e19.ttf");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: Spartan;
-  src: url("/TODO-list/SpartanMB-Regular.9e10aacb.otf");
+  font-family: "Spartan";
+  src: url("/TODO-list/LeagueSpartan-Regular.19512d88.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: Spartan;
-  src: url("/TODO-list/SpartanMB-Bold.b814363d.otf");
+  font-family: "League Spartan";
+  src: url("/TODO-list/LeagueSpartan-Bold.abaee651.ttf") format("ttf");
   font-weight: 800;
   font-style: normal;
 }
@@ -86,6 +86,7 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
+  width: 150px;
 }
 .btn__select:focus {
   background-color: inherit;
@@ -232,7 +233,6 @@ body {
   display: flex;
   justify-content: space-between;
   height: 24px;
-  min-width: 276px;
   width: auto;
   margin-bottom: 10px;
   position: relative;
@@ -241,7 +241,6 @@ body {
 
 .text__todo {
   font-weight: bold;
-  font-family: Spartan;
 }
 
 .input__add-task {
@@ -439,4 +438,4 @@ body {
   font-size: 12px;
 }
 
-/*# sourceMappingURL=/TODO-list/style.f5f4ede8.css.map */
+/*# sourceMappingURL=/TODO-list/style.fc9bda22.css.map */
