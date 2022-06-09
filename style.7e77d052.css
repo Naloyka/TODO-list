@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Noto Sans";
   src: url("/TODO-list/NotoSans-Regular.1c7bb14b.ttf");
@@ -76,6 +77,17 @@
 }
 .button__add-task_plus:before {
   transform: rotate(-90deg);
+}
+
+.container__select {
+  display: flex;
+  justify-content: space-between;
+  min-height: 24px;
+  width: auto;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .btn__select {
@@ -183,6 +195,14 @@
   text-decoration: line-through;
 }
 
+@keyframes task {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .profile__popup {
   display: flex;
   justify-content: center;
@@ -244,107 +264,31 @@
     opacity: 1;
   }
 }
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body {
-  max-width: 768px;
-  width: 100%;
-  width: 100%;
-  font-family: Noto Sans;
-  background-color: #f2f2f2;
-  min-height: 100vh;
-}
-
-.body {
+.close,
+.close__popup {
   display: block;
-  position: relative;
-  animation-duration: 0.5s;
-  animation-name: fade;
+  width: 8px;
+  height: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-image: url("/TODO-list/icon-close.7961f5b5.svg");
+  background-position: center;
+  border: none;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin-right: 2px;
+  cursor: pointer;
 }
-.body::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
+.close:focus,
+.close__popup:focus {
+  outline: #BFC6D0 1px solid;
+}
+
+.close__popup {
+  top: 10px;
+  right: 10px;
+  background-image: url("/TODO-list/icon-close.7961f5b5.svg");
   position: absolute;
-  z-index: 100;
-  opacity: 0.3;
-}
-
-@keyframes fade {
-  from {
-    visibility: visible;
-  }
-  to {
-    visibility: hidden;
-  }
-}
-.header__todo {
-  width: auto;
-  height: 46px;
-  display: block;
-  padding: 16px 22px;
-  background-color: rgb(255, 255, 255);
-}
-
-.header__menu {
-  display: flex;
-  height: 14px;
-  align-items: center;
-  justify-content: space-between;
-}
-.header__menu_main-information {
-  display: flex;
-  gap: 5px;
-}
-
-.title__avtograph {
-  display: block;
-  height: 100%;
-}
-.title__avtograph_link {
-  text-transform: uppercase;
-  display: block;
-  margin-left: 4px;
-  font-weight: bold;
-}
-
-.logo__avtograph_img {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.main {
-  background-color: #f2f2f2;
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 50px 22px;
-}
-
-.container__select {
-  display: flex;
-  justify-content: space-between;
-  min-height: 24px;
-  width: auto;
-  margin-bottom: 10px;
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-
-.text__todo {
-  font-weight: bold;
-  font-family: Spartan;
 }
 
 .input__add-task {
@@ -382,39 +326,97 @@ body {
   height: 16px;
 }
 
-@keyframes task {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.close,
-.close__user {
+.header__todo {
+  width: auto;
+  height: 46px;
   display: block;
-  width: 8px;
-  height: 8px;
-  margin-top: auto;
-  margin-bottom: auto;
-  background-image: url("/TODO-list/icon-close.7961f5b5.svg");
-  background-position: center;
-  border: none;
-  background-repeat: no-repeat;
-  background-color: white;
-  margin-right: 2px;
-  cursor: pointer;
+  padding: 16px 22px;
+  background-color: rgb(255, 255, 255);
 }
-.close:focus,
-.close__user:focus {
-  outline: #BFC6D0 1px solid;
+.header__menu {
+  display: flex;
+  height: 14px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__menu_main-information {
+  display: flex;
+  gap: 5px;
 }
 
-.close__user {
-  top: 10px;
-  right: 10px;
-  background-image: url("/TODO-list/icon-close.7961f5b5.svg");
+.title__avtograph {
+  display: block;
+  height: 100%;
+}
+.title__avtograph_link {
+  text-transform: uppercase;
+  display: block;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+.logo__avtograph_img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.name__todo {
+  font-weight: bold;
+  font-family: Spartan;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*body*/
+body {
+  max-width: 768px;
+  width: 100%;
+  width: 100%;
+  font-family: Noto Sans;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+
+.body {
+  display: block;
+  position: relative;
+  animation-duration: 0.5s;
+  animation-name: fade;
+}
+.body::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
   position: absolute;
+  z-index: 100;
+  opacity: 0.3;
 }
 
-/*# sourceMappingURL=/TODO-list/style.da7a8262.css.map */
+@keyframes fade {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+/*Контейнер с контентом*/
+.main {
+  background-color: #f2f2f2;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 50px 22px;
+}
+
+/*# sourceMappingURL=/TODO-list/style.7e77d052.css.map */

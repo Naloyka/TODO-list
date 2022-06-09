@@ -342,7 +342,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.closePopup = closePopup;
-var closeUser = document.querySelector(".close__user");
+var closeUser = document.querySelector(".close__popup");
 var containerUser = document.querySelector(".profile__popup");
 var bodyContent = document.querySelector(".body");
 
@@ -424,4 +424,4 @@ var _addTask = require("./addTask");
 (0, _option.hideSelect)();
 (0, _closePopup.closePopup)();
 },{"./loadStateTask":"MbzG","./loadRemoteTasks":"TlJU","./getTaskHTML":"bM6Q","./deleteTask":"Vng4","./checked":"ZRZM","./load":"zgpx","./option":"lMtw","./closePopup":"mmi3","./addTask":"Oc8k"}]},{},["d6sW"], null)
-//# sourceMappingURL=/TODO-list/main.a6e6dd86.js.map
+//# sourceMappingURL=/TODO-list/main.99d6accb.js.map
