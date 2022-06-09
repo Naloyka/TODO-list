@@ -10,25 +10,25 @@ export function filterStateTasks() {
     
             if (item.getAttribute("data-value") == 3) {
                 for (let i = 0; i < stateChecked.length; i++) {
-                    containerTask[i].classList.remove("container__task_hidden")
+                    containerTask[i].classList.remove("task__container_hidden")
                     if (stateChecked[i].checked) {
-                        containerTask[i].classList.add("container__task_hidden")
+                        containerTask[i].classList.add("task__container_hidden")
                     }
                 }
             }
     
             if (item.getAttribute("data-value") == 2) {
                 for (let i = 0; i < stateChecked.length; i++) {
-                    containerTask[i].classList.remove("container__task_hidden")
+                    containerTask[i].classList.remove("task__container_hidden")
                     if (stateChecked[i].checked === false) {
-                        containerTask[i].classList.add("container__task_hidden")
+                        containerTask[i].classList.add("task__container_hidden")
                     }
                 }
             }
     
             if (item.getAttribute("data-value") == 1) {
                 for (let i = 0; i < stateChecked.length; i++) {
-                    containerTask[i].classList.remove("container__task_hidden")
+                    containerTask[i].classList.remove("task__container_hidden")
                 }
             }
         })
