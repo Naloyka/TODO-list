@@ -1,10 +1,12 @@
 .btn__select {
+    display: inline-block;
     font-weight: bold;
     border-color: inherit;
     background-color: inherit;
     border: none;
     font-size: 16px;
     cursor: pointer;
+    white-space: nowrap;
   
     &:focus {
         background-color: inherit;
@@ -17,6 +19,7 @@
         width: 9px;
         height: 6px;
         margin-left: 7px;
+        white-space: nowrap;
     }
 }
 
