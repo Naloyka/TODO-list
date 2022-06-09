@@ -1,0 +1,11 @@
+.title__avtograph {
+    display: block;
+    height: 100%;
+
+    &_link {
+        text-transform: uppercase;
+        display: block;
+        margin-left: 4px;
+        font-weight: bold;
+    }
+}

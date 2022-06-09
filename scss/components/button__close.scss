@@ -1,0 +1,26 @@
+.close,
+.close__popup {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-image: url("/Image/icon-close.svg");
+    background-position: center;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: white;
+    margin-right: 2px;
+    cursor: pointer;
+
+    &:focus {
+        outline: #BFC6D0 1px solid;
+    }
+}
+
+.close__popup {
+    top: 10px;
+    right: 10px;
+    background-image: url("/Image/icon-close.svg");
+    position: absolute;
+}

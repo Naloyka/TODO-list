@@ -1,0 +1,21 @@
+.header {
+    &__todo {
+        width: auto;
+        height: 46px;
+        display: block;
+        padding: 16px 22px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    &__menu {
+        display: flex;
+        height: 14px;
+        align-items: center;
+        justify-content: space-between;
+
+        &_main-information {
+            display: flex;
+            gap: 5px;
+        }
+    }
+}

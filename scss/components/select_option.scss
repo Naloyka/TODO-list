@@ -1,3 +1,14 @@
+.container__select {
+    display: flex;
+    justify-content: space-between;
+    min-height: 24px;
+    width: auto;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 .btn__select {
     display: inline-block;
     font-weight: bold;

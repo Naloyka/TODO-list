@@ -1,0 +1,11 @@
+.contact__avtograph {
+    display: flex;
+    gap: 15px;
+
+    &_tel,
+    &_mail {
+        display: block;
+        width: 16px;
+        height: 16px;
+    }
+}

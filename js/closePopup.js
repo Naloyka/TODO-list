@@ -1,4 +1,4 @@
-const closeUser = document.querySelector(".close__user")
+const closeUser = document.querySelector(".close__popup")
 const containerUser = document.querySelector(".profile__popup")
 const bodyContent = document.querySelector(".body")
 
