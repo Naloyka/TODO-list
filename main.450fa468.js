@@ -126,7 +126,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.getTaskHTML = getTaskHTML;
 
 function getTaskHTML(text, done, remoteTask) {
-  return "<div class=\"container__task\" ".concat(remoteTask ? "data-flag=\"server\"" : "", ">\n    <div class=\"task\">\n    <div class=\"task__item\">\n    <label class=\"checkbox\">\n        <input type=\"checkbox\" name=\"checkbox\" class=\"checkbox__input\"").concat(done ? ' checked' : '', " id=\"checkbox\">\n        <span class=\"checkbox__label\"></span>\n    </label>\n    <p class=\"text__task").concat(done ? " text__task_done" : "", " \" translate=\"no\">").concat(text, "</p>\n        </div>\n        <button class=\"close\"></button>\n    </div>\n    </div>");
+  return "<div class=\"task__container\" ".concat(remoteTask ? "data-flag=\"server\"" : "", ">\n    <div class=\"task\">\n    <div class=\"task__item\">\n    <label class=\"checkbox\">\n        <input type=\"checkbox\" name=\"checkbox\" class=\"checkbox__input\"").concat(done ? ' checked' : '', " id=\"checkbox\">\n        <span class=\"checkbox__label\"></span>\n    </label>\n    <p class=\"task__text").concat(done ? " task__text_done" : "", " \" translate=\"no\">").concat(text, "</p>\n        </div>\n        <button class=\"close\"></button>\n    </div>\n    </div>");
 }
 },{}],"MbzG":[function(require,module,exports) {
 "use strict";
@@ -162,12 +162,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.load = load;
 
 function load() {
-  var containerTask = Array.from(document.querySelectorAll(".container__task"));
+  var containerTask = Array.from(document.querySelectorAll(".task__container"));
   var arraySaveTasks = [];
 
   for (var i = 0; i < containerTask.length; i++) {
     if (containerTask[i].getAttribute("data-flag") !== "server") {
-      var textTask = containerTask[i].querySelector(".text__task").textContent;
+      var textTask = containerTask[i].querySelector(".task__text").textContent;
       var childTask = containerTask[i].querySelector(".checkbox__input").checked;
       var task = {
         "checked": childTask,
@@ -190,14 +190,14 @@ var _load = require("./load");
 
 function checked() {
   var checkboxInput = Array.from(document.querySelectorAll(".checkbox__input"));
-  var textTask = Array.from(document.querySelectorAll(".text__task"));
+  var textTask = Array.from(document.querySelectorAll(".task__text"));
 
   var _loop = function _loop(i) {
     checkboxInput[i].addEventListener("click", function () {
       if (checkboxInput[i].checked) {
-        textTask[i].classList.add("text__task_done");
+        textTask[i].classList.add("task__text_done");
       } else {
-        textTask[i].classList.remove("text__task_done");
+        textTask[i].classList.remove("task__text_done");
       }
 
       (0, _load.load)();
@@ -222,7 +222,7 @@ function deleteTask() {
   var close = Array.from(document.querySelectorAll(".close"));
   close.forEach(function (item) {
     item.addEventListener("click", function (e) {
-      var deleteElement = item.closest(".container__task");
+      var deleteElement = item.closest(".task__container");
       deleteElement.remove();
       localStorage.clear();
       (0, _load.load)();
@@ -278,13 +278,13 @@ function filterStateTasks() {
   option.forEach(function (item) {
     item.addEventListener("click", function (e) {
       var stateChecked = Array.from(document.querySelectorAll(".checkbox__input"));
-      var containerTask = Array.from(document.querySelectorAll(".container__task"));
+      var containerTask = Array.from(document.querySelectorAll(".task__container"));
 
       if (item.getAttribute("data-value") == 3) {
         for (var i = 0; i < stateChecked.length; i++) {
           containerTask[i].classList.remove("container__task_hidden");
 
-          if (stateChecked[i].checked === true) {
+          if (stateChecked[i].checked) {
             containerTask[i].classList.add("container__task_hidden");
           }
         }
@@ -369,7 +369,6 @@ var _load = require("./load");
 var _deleteTask = require("./deleteTask");
 
 var add = document.querySelector(".button__add-task");
-var containerInput = document.querySelector(".input__add-task");
 var input = document.querySelector(".input__add-task_entry-field");
 var pasteTask = document.querySelector(".paste__task");
 
@@ -424,6 +423,5 @@ var _addTask = require("./addTask");
 (0, _option.changeIconOptions)();
 (0, _option.hideSelect)();
 (0, _closePopup.closePopup)();
-(0, _addTask.addTask)();
 },{"./loadStateTask":"MbzG","./loadRemoteTasks":"TlJU","./getTaskHTML":"bM6Q","./deleteTask":"Vng4","./checked":"ZRZM","./load":"zgpx","./option":"lMtw","./closePopup":"mmi3","./addTask":"Oc8k"}]},{},["d6sW"], null)
-//# sourceMappingURL=/TODO-list/main.70808a45.js.map
+//# sourceMappingURL=/TODO-list/main.450fa468.js.map
