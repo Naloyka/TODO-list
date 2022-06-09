@@ -87,7 +87,9 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
-  white-space: nowrap;
+  position: relative;
+  margin-right: 10px;
+  height: 24px;
 }
 .btn__select:focus {
   background-color: inherit;
@@ -99,7 +101,8 @@
   width: 9px;
   height: 6px;
   margin-left: 7px;
-  white-space: nowrap;
+  position: absolute;
+  top: 10px;
 }
 
 .btn__select_active {
@@ -234,11 +237,12 @@ body {
 .container__select {
   display: flex;
   justify-content: space-between;
-  height: 24px;
+  min-height: 24px;
   width: auto;
   margin-bottom: 10px;
   position: relative;
   width: 100%;
+  height: auto;
 }
 
 .text__todo {
@@ -442,4 +446,4 @@ body {
   font-size: 12px;
 }
 
-/*# sourceMappingURL=/TODO-list/style.a2d320d4.css.map */
+/*# sourceMappingURL=/TODO-list/style.0342b5cb.css.map */
