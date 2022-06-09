@@ -1,27 +1,27 @@
 @font-face {
-    font-family: Noto Sans;
+    font-family: 'Noto Sans';
     src: url("/font/Noto_Sans/NotoSans-Regular.ttf");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: Noto Sans;
+    font-family: 'Noto Sans';
     src: url("/font/Noto_Sans/NotoSans-Bold.ttf");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
-    font-family: Spartan;
-    src: url("/font/Spartan-MB-Regular/SpartanMB-Regular.otf");
+    font-family: 'Spartan';
+    src: url("/font/Spartan-MB-Regular/LeagueSpartan-Regular.ttf") format('ttf');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: Spartan;
-    src: url("/font/Spartan-MB-Regular/SpartanMB-Bold.otf");
+    font-family: 'League Spartan';
+    src: url("/font/Spartan-MB-Regular/LeagueSpartan-Bold.ttf") format('ttf');
     font-weight: 800;
     font-style: normal;
 }
@@ -128,7 +128,6 @@ body {
     display: flex;
     justify-content: space-between;
     height: 24px;
-    min-width: 276px;
     width: auto;
     margin-bottom: 10px;
     position: relative;
@@ -137,7 +136,6 @@ body {
 
 .text__todo {
     font-weight: bold;
-    font-family: Spartan;
 }
 
 .input__add-task {
