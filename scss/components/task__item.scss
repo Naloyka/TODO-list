@@ -1,0 +1,40 @@
+.task__container {
+    display: block;
+    height: auto;
+    padding: 15px 10px;
+    width: 100%;
+    background-color: white;
+    margin-top: 5px;
+    min-height: 44px;
+    animation-name: task;
+    animation-duration: 0.7s;
+
+    &_hidden {
+        display: none;
+    }
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    overflow: hidden;
+
+    &__item {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    &__text {
+        display: block;
+        overflow: hidden;
+        width: auto;
+
+        &_done {
+            text-decoration: line-through;
+        }
+    }
+}

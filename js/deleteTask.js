@@ -7,7 +7,7 @@ export function deleteTask() {
     close.forEach(item => {
         item.addEventListener("click", (e) => {
 
-            let deleteElement = item.closest(".container__task")
+            let deleteElement = item.closest(".task__container")
             deleteElement.remove()
             localStorage.clear()
             load()

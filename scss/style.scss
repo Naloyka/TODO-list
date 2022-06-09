@@ -27,8 +27,10 @@
 }
 
 @import './components/checkbox.scss';
-@import './scss/components/add.scss';
+@import "./components/button__add.scss";
 @import "./components/select_option.scss";
+@import "./components/task__item";
+@import "./components/popup__profile.scss";
 
 $colorMain: #f2f2f2;
 
@@ -178,22 +180,6 @@ body {
     }
 }
 
-.container__task {
-    display: block;
-    height: auto;
-    padding: 15px 10px;
-    width: 100%;
-    background-color: white;
-    margin-top: 5px;
-    min-height: 44px;
-    animation-name: task;
-    animation-duration: 0.7s;
-
-    &_hidden {
-        display: none;
-    }
-}
-
 @keyframes task {
     0% {
         opacity: 0
@@ -201,51 +187,6 @@ body {
 
     100% {
         opacity: 1
-    }
-}
-
-.task {
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    overflow: hidden;
-}
-
-.task__item {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    align-items: center;
-    margin-right: 10px;
-}
-
-.state__task {
-    display: block;
-    width: 13px;
-    height: 13px;
-    border: 2px solid #BFC6D0;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10px;
-    padding: 2px;
-
-    ::before {
-        content: "";
-        display: block;
-        width: 5px;
-        height: 5px;
-        background-color: #55B8FF;
-        border-radius: 50%;
-    }
-}
-
-.text__task {
-    display: block;
-    overflow: hidden;
-    width: auto;
-
-    &_done {
-        text-decoration: line-through;
     }
 }
 
@@ -274,75 +215,4 @@ body {
     right: 10px;
     background-image: url("/Image/icon-close.svg");
     position: absolute;
-}
-
-/*всплывающее окно*/
-
-.profile__popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 198px;
-    height: 180px;
-    background-color: white;
-    justify-content: center;
-    z-index: 1000;
-    padding: 30px 25px;
-    top: 40vh;
-    right: calc(50% - 99px);
-    animation-name: user;
-    animation-duration: 0.5s;
-}
-
-.profile__login_icon {
-    display: block;
-    width: 22px;
-    height: 22px;
-}
-
-.profile-menu__icon {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
-}
-
-@keyframes user {
-    0% {
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1
-    }
-}
-
-.profile__menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 10px;
-    width: 80px;
-    height: 88px;
-}
-
-.profile__information {
-    display: flex;
-    gap: 10px;
-    width: 137px;
-    border-bottom: 1px solid #55B8FF;
-    height: 36px;
-}
-
-.profile__name_user {
-    display: inline-block;
-    text-transform: uppercase;
-    font-family: Spartan;
-    font-weight: bold;
-}
-
-.profile-menu__link {
-    display: inline-block;
-    font-size: 12px;
 }

@@ -6,12 +6,12 @@ export function filterStateTasks() {
 
         item.addEventListener("click", (e) => {
             const stateChecked = Array.from(document.querySelectorAll(".checkbox__input"))
-            const containerTask = Array.from(document.querySelectorAll(".container__task"))
+            const containerTask = Array.from(document.querySelectorAll(".task__container"))
     
             if (item.getAttribute("data-value") == 3) {
                 for (let i = 0; i < stateChecked.length; i++) {
                     containerTask[i].classList.remove("container__task_hidden")
-                    if (stateChecked[i].checked === true) {
+                    if (stateChecked[i].checked) {
                         containerTask[i].classList.add("container__task_hidden")
                     }
                 }

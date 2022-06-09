@@ -4,13 +4,12 @@ import { load } from "./load"
 import { deleteTask } from "./deleteTask"
 
 const add = document.querySelector(".button__add-task")
-const containerInput = document.querySelector(".input__add-task")
 const input = document.querySelector(".input__add-task_entry-field")
 const pasteTask = document.querySelector(".paste__task")
 
 export function addTask() {
 
-    let addTaskItem = function () {
+    const addTaskItem = function () {
         if (input.value === "") {
             return
         }

@@ -1,0 +1,69 @@
+.profile {
+    &__popup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 198px;
+        height: 180px;
+        background-color: white;
+        justify-content: center;
+        z-index: 1000;
+        padding: 30px 25px;
+        top: 40vh;
+        right: calc(50% - 99px);
+        animation-name: user;
+        animation-duration: 0.5s;
+    }
+
+    &__login_icon {
+        display: block;
+        width: 22px;
+        height: 22px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 10px;
+        width: 80px;
+        height: 88px;
+
+        &_icon {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+        }
+        &_link {
+            display: inline-block;
+            font-size: 12px;
+        }
+    }
+    &__information {
+        display: flex;
+        gap: 10px;
+        width: 137px;
+        border-bottom: 1px solid #55B8FF;
+        height: 36px;
+    }
+    &__name_user {
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: Spartan;
+        font-weight: bold;
+    }
+}
+
+
+
+@keyframes user {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
