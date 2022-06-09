@@ -80,12 +80,14 @@
 }
 
 .btn__select {
+  display: inline-block;
   font-weight: bold;
   border-color: inherit;
   background-color: inherit;
   border: none;
   font-size: 16px;
   cursor: pointer;
+  white-space: nowrap;
 }
 .btn__select:focus {
   background-color: inherit;
@@ -97,6 +99,7 @@
   width: 9px;
   height: 6px;
   margin-left: 7px;
+  white-space: nowrap;
 }
 
 .btn__select_active {
@@ -428,6 +431,7 @@ body {
 }
 
 .profile__name_user {
+  display: inline-block;
   text-transform: uppercase;
   font-family: Spartan;
   font-weight: bold;
@@ -438,4 +442,4 @@ body {
   font-size: 12px;
 }
 
-/*# sourceMappingURL=/TODO-list/style.6e128022.css.map */
+/*# sourceMappingURL=/TODO-list/style.a2d320d4.css.map */
