@@ -251,10 +251,11 @@ function loadRemoteTasks() {
   xhr.send();
   xhr.addEventListener("readystatechange", function () {
     if (xhr.readyState === xhr.DONE) {
-      var parseJ = JSON.parse(xhr.responseText);
+      var parseResponse = JSON.parse(xhr.responseText);
 
       for (var i = 0; i < 5; i++) {
-        var textContent = parseJ[i].title;
+        var randomNum = Math.floor(Math.random() * (parseResponse.length - 0)) + 0;
+        var textContent = parseResponse[randomNum].title;
         pasteTask.insertAdjacentHTML('beforeend', (0, _getTaskHTML.getTaskHTML)(textContent, false, true));
       }
 
@@ -424,4 +425,4 @@ var _addTask = require("./addTask");
 (0, _option.hideSelect)();
 (0, _closePopup.closePopup)();
 },{"./loadStateTask":"MbzG","./loadRemoteTasks":"TlJU","./getTaskHTML":"bM6Q","./deleteTask":"Vng4","./checked":"ZRZM","./load":"zgpx","./option":"lMtw","./closePopup":"mmi3","./addTask":"Oc8k"}]},{},["d6sW"], null)
-//# sourceMappingURL=/TODO-list/main.99d6accb.js.map
+//# sourceMappingURL=/TODO-list/main.b541a8d4.js.map
