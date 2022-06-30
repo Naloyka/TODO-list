@@ -12,20 +12,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Spartan';
-    src: url('/font/Spartan-MB-Regular/LeagueSpartan-Regular.ttf') format('.ttf');;
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Spartan', sans-serif;
-    src: url('/font/Spartan-MB-Regular/LeagueSpartan-Bold.ttf') format('.ttf');
-    font-weight: 800;
-    font-style: normal;
-}
-
 @import "./components/checkbox.scss";
 @import "./components/button__add.scss";
 @import "./components/select_option.scss";
