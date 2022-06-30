@@ -11,18 +11,6 @@
   font-weight: 800;
   font-style: normal;
 }
-@font-face {
-  font-family: "Spartan";
-  src: url("/TODO-list/LeagueSpartan-Regular.19512d88.ttf") format(".ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Spartan", sans-serif;
-  src: url("/TODO-list/LeagueSpartan-Bold.abaee651.ttf") format(".ttf");
-  font-weight: 800;
-  font-style: normal;
-}
 .checkbox__label {
   cursor: pointer;
 }
@@ -253,7 +241,6 @@
 .profile__name_user {
   display: inline-block;
   text-transform: uppercase;
-  font-family: Spartan;
   font-weight: bold;
 }
 
@@ -363,7 +350,6 @@
 
 .name__todo {
   font-weight: bold;
-  font-family: Spartan;
 }
 
 * {
@@ -424,4 +410,4 @@ body {
   padding: 50px 22px;
 }
 
-/*# sourceMappingURL=/TODO-list/style.8490d7d6.css.map */
+/*# sourceMappingURL=/TODO-list/style.636219fb.css.map */
