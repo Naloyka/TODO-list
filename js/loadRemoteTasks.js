@@ -10,9 +10,10 @@ export function loadRemoteTasks () {
     xhr.send()
     xhr.addEventListener("readystatechange", () => {
         if (xhr.readyState === xhr.DONE) {
-            let parseJ = JSON.parse(xhr.responseText)
+            let parseResponse = JSON.parse(xhr.responseText)
             for (let i = 0; i < 5; i++) {
-                const textContent = parseJ[i].title
+                let randomNum =  Math.floor(Math.random() * (parseResponse.length - 0)) + 0;
+                const textContent = parseResponse[randomNum].title
                 pasteTask.insertAdjacentHTML('beforeend', getTaskHTML(textContent, false, true))
             }
             checked()

@@ -61,6 +61,7 @@
     z-index: 5;
     padding: 15px 20px;
     background-color: white;
+    border: 3px solid  #f4f4ff;
 }
 
 .option {
@@ -72,7 +73,7 @@
 .option__link {
     cursor: pointer;
 
-    &:hover {
+    &:active {
         display: block;
         font-weight: bold;
         background-image: url("../Image/Vector3.png");
